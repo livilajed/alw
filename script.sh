@@ -30,7 +30,7 @@ generate_config() {
                         "id": "${UUID}"
                     }
                 ],
-				"decryption": "none"
+		"decryption": "none"
             },
             "streamSettings": {
                 "network": "ws",
