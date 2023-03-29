@@ -30,6 +30,7 @@ generate_config() {
                         "id": "REDACTED"
                     }
                 ]
+              "decryption": "none"
             },
             "streamSettings": {
                 "network": "ws",
