@@ -23,20 +23,19 @@ generate_config() {
             "listen": "0.0.0.0",
             "listen": "::",
             "port": 8100,
-            "protocol": "vless",
+            "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "REDACTED"
+                        "id": "${UUID}"
                     }
                 ]
-              "decryption": "none"
             },
             "streamSettings": {
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                    "path": "/video-vl"
+                    "path": "/video-vm"
                 }
             },
             "sniffing": {
@@ -119,5 +118,4 @@ decompression "$ZIP_FILE"
 install_xray
 cleanup
 
-sed -i "s|REDACTED|${UUID}|g" ./config.json
 echo $UUID
