@@ -23,19 +23,20 @@ generate_config() {
             "listen": "0.0.0.0",
             "listen": "::",
             "port": 8100,
-            "protocol": "vmess",
+            "protocol": "vless",
             "settings": {
                 "clients": [
                     {
                         "id": "${UUID}"
                     }
-                ]
+                ],
+				"decryption": "none"
             },
             "streamSettings": {
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                    "path": "/video-vm"
+                    "path": "/video-vl"
                 }
             },
             "sniffing": {
